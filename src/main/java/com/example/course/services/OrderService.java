@@ -5,20 +5,20 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.course.entities.User;
-import com.example.course.repositories.UserRepository;
+import com.example.course.entities.Order;
+import com.example.course.repositories.OrderRepository;
 
 @Service
-public class UserService {
+public class OrderService {
 
 	@Autowired
-	private UserRepository repository;
+	private OrderRepository repository;
 	
-	public List<User> findAll() {
+	public List<Order> findAll() {
 		return repository.findAll();
 	}
 	
-	public User findById(Long id) {
+	public Order findById(Long id) {
 		return repository.findById(id).get();
 	}
 }
